@@ -5,20 +5,25 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <!--hover animation-->
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <!--controller-->
+    
     <!--box click animation-->
     <script src="https://unpkg.com/aframe-event-set-component@^4.2.1/dist/aframe-event-set-component.min.js"></script>
     <!--plane click to event 실행-->
     <script src="aframe.propagate.js"></script>
     <!--url 링크-->
     <script src="clickurl.js"></script>
+    <!--controller-->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@8d60730f449ae0e50976b0dbe58bad4ce25f6602/dist/aframe-master.min.js"></script>
+     <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.7/dist/aframe-controller-cursor-component.min.js"></script>
   </head>
   <body>
     <a-scene main-ui>
 
-      <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
-     <a-entity vive-controls="hand: left"></a-entity>
-     <a-entity vive-controls="hand: right"></a-entity>
-      
+    <a-entity camera look-controls wasd-controls></a-entity>
+    <a-entity vive-controls="hand: left"></a-entity>
+    <a-entity vive-controls="hand: right" controller-cursor></a-entity>
+    
       <a-assets>
         <img id="start-bg" src="https://cdn.glitch.com/5da0d073-5eaf-4724-9a37-9aeed88ba735%2F3356557402_4bf41d2ca8_b.jpg?1504760654466">
         <img id="detail-bg" src="assets/indexpic2.png">
