@@ -19,10 +19,6 @@
   <body>
     <a-scene main-ui>
 
-    <a-entity camera look-controls wasd-controls></a-entity>
-    <a-entity vive-controls="hand: left"></a-entity>
-    <a-entity vive-controls="hand: right" controller-cursor></a-entity>
-
       <a-assets>
         <img id="start-bg" src="https://cdn.glitch.com/5da0d073-5eaf-4724-9a37-9aeed88ba735%2F3356557402_4bf41d2ca8_b.jpg?1504760654466">
         <img id="detail-bg" src="assets/indexpic2.png">
@@ -30,6 +26,9 @@
         <img id="right-tile-image" src="assets/indexpic1.jpg">
         <a-mixin id="overlay-fade-in" animation="property: opacity; dir: normal; dur: 500; easing: easeOutQuad; loop: false; from:0; to: .75; startEvents: clickDown;"></a-mixin>
       </a-assets>
+
+     <a-entity camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+
       <a-sky color="#ECECEC"></a-sky>
 
       <a-sphere id="main-bg" radius="100" position="0 0 0" rotation="0 90 0" src="#start-bg" color="#333333" material="side: double;"
